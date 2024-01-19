@@ -654,7 +654,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                     inp_text = gr.Textbox(label="*文本标注文件",value=r"output/asr_opt/slicer_opt.list",interactive=True)
                     inp_wav_dir = gr.Textbox(
                         label="*训练集音频文件目录",
-                        # value=r"output/slicer_opt",
+                        value=r"output/slicer_opt",
                         interactive=True,
                         placeholder="训练集音频文件目录 拼接 list文件里波形对应的文件名。"
                     )
