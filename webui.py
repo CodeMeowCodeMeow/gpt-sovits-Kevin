@@ -622,7 +622,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                 close_asr_button = gr.Button("终止ASR进程", variant="primary",visible=False)
                 asr_inp_dir = gr.Textbox(
                     label="批量ASR(中文only)输入文件夹路径",
-                    value="D:\\RVC1006\\GPT-SoVITS\\raw\\xxx",
+                    value="output/slicer_opt",
                     interactive=True,
                 )
                 asr_info = gr.Textbox(label="ASR进程输出信息")
@@ -631,7 +631,7 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
                 if_label = gr.Checkbox(label="是否开启打标WebUI",show_label=True)
                 path_list = gr.Textbox(
                     label="打标数据标注文件路径",
-                    value="D:\\RVC1006\\GPT-SoVITS\\raw\\xxx.list",
+                    value="output/asr_opt/slicer_opt.list",
                     interactive=True,
                 )
                 label_info = gr.Textbox(label="打标工具进程输出信息")
@@ -651,10 +651,10 @@ with gr.Blocks(title="GPT-SoVITS WebUI") as app:
             with gr.TabItem("1A-训练集格式化工具"):
                 gr.Markdown(value="输出logs/实验名目录下应有23456开头的文件和文件夹")
                 with gr.Row():
-                    inp_text = gr.Textbox(label="*文本标注文件",value=r"D:\RVC1006\GPT-SoVITS\raw\xxx.list",interactive=True)
+                    inp_text = gr.Textbox(label="*文本标注文件",value=r"output/asr_opt/slicer_opt.list",interactive=True)
                     inp_wav_dir = gr.Textbox(
                         label="*训练集音频文件目录",
-                        # value=r"D:\RVC1006\GPT-SoVITS\raw\xxx",
+                        # value=r"output/slicer_opt",
                         interactive=True,
                         placeholder="训练集音频文件目录 拼接 list文件里波形对应的文件名。"
                     )
